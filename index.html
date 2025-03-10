@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles/Styles.css">
+</head>
+<body>
+    <form action="">
+        <label for="name-imput">Name:</label>
+        <input type="text" name="" id="name-imput">
+        <br>
+        <label for="age-imput">Age:</label>
+        <input type="number" name="" id="age-imput"></imput>
+        <br>
+        <label for="D.O.B-imput">D.O.B:</label>
+        <input type="date" name="" id="D.O.B-imput"></input>
+        <br>
+        <label for="">Class:</label>
+        <select onchange="Classselection()" id="Classselector">
+            <option value="fighter">fighter</option>
+            <option value="mage">mage</option>
+            <option value="rouge">rouge</option>
+        </select>
+
+        <div class="hide" id="Choosespells">
+            <label for="">starting spell</label>
+            <input type="radio" name="spell" id=""> <label for="">fireball</label>
+            <input type="radio" name="spell" id=""> <label for="">thunder</label>
+            <input type="radio" name="spell" id=""> <label for="">shadowball</label>
+        </div>
+
+        <br>
+        <label for="checkbox-imput">Have you seen death</label>
+        <input type="checkbox" Name="checkbox-imput">
+        <br>
+        <label for="">wolud you like to see death</label>
+        <br>
+        <input type="radio" name="agree" id="agree"> <label for="agree">Agree</label>
+        <br>
+        <input type="radio" name="agree" id="disagree"> <label for="agree">disgree</label>
+        <br>
+        <button type="button" onclick="handleSubmit(event)">Submit</button>
+    </form>
+
+    <div id="sheet" class="characttersheet hide">
+        <h1>name:</h1>
+        <p id="name-output"></p>
+    </div>
+
+    <script src="Code/Code.js"></script>
+</body>
+</html>

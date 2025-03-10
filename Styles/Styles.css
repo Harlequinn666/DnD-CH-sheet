@@ -1,0 +1,13 @@
+form{
+    background-color: red;
+    border-style:groove;
+    border-radius: 5px;
+    padding: 4%;
+}
+
+.characttersheet{
+    color: rgb(255, 0, 0);
+}
+.hide{
+    display: none;
+}
