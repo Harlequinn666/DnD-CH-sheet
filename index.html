@@ -7,6 +7,182 @@
     <link rel="stylesheet" href="Styles/Styles.css">
 </head>
 <body>
+    <div class="container">
+            <h1>DnD Character sheet</h1>
+            <label for="name-input">Name:</label>
+            <input type="text" name="" id="name-input">
+
+            <br>
+
+            <label for="house">Select the house you wish to belong to:</label>
+                <select onchange="houseselection()" id="houseselector">
+                    <option value=""></option>
+                    <option value=" De Caligo">De Caligo</option>   <!--Latina for Dark-->
+                    <option value=" De Ignis">De Ignis</option>     <!--Latina for Fire-->
+                    <option value=" De Aqua">De Aqua</option>       <!--Latina for Water-->                    
+                    <option value=" De Terra">De Terra</option>     <!--Latina for Earth-->                    
+                    <option value=" De Aeris">De Aeris</option>     <!--Latina for Air-->
+                    <option value=" De Lux">De Lux</option>         <!--Latina for Light-->
+                </select>
+
+                <br>
+
+                <label for="age-input">What age are you?</label>
+                <input type="number" name="" id="age-input"></input>
+                <br>
+
+            <label for="Race">Select your race:</label>
+                <select id="Race">
+                    <option value=" Blank"></option>
+                    <option value="Human">Human</option>
+                    <option value="Elf">Elf</option>
+                    <option value="Dragonborn">Dragonborn</option>
+                </select>   
+            <!--<br>-->
+            <label for="Class">Select your class:</label>
+                <select onchange="Classselection()" id="Classselector">
+                    <option value="Blank"></option>
+                    <option value="Knight">Knight</option>
+                    <option value="Mage">Mage</option>
+                    <option value="Assassin">Assassin</option>
+                    <option value="Necromancer">Necromancer</option>
+                    <option value="Tamer">Tamer</option>
+                    <option value="Spirtiualist">spirtiualist</option>
+                </select>   
+
+            <br>
+            
+        <div>  <!-- starting gear-->  
+            <div class="hide" id="Chooseequipment">
+                <label for="">Choose one weapon to start with</label>
+                <input type="radio" name="" id="equipment"> <label for="">sword</label>
+                <input type="radio" name="" id="equipment"> <label for="">shield</label>
+                <input type="radio" name="" id="equipment"> <label for="">armor</label>
+            </div>
+            <div class="hide" id="Choosespells">
+                <label for="">Choose one spell to master</label>
+                <input type="radio" name="M-spell" id=""> <label for="">fireball</label>
+                <input type="radio" name="M-spell" id=""> <label for="">thunder</label>
+                <input type="radio" name="M-spell" id=""> <label for="">magic missile</label>
+            </div>
+            <div class="hide" id="Chooseitem">
+                <label for="">Choose one item to take with you</label>
+                <input type="radio" name="A-item" id=""> <label for="">Daggers</label>
+                <input type="radio" name="A-item" id=""> <label for="">smoke bombs</label>
+                <input type="radio" name="A-item" id=""> <label for="">invisibility cloak</label>
+            </div>
+            <div class="hide" id="Choosedeath">
+                <label for="">Choose one to take with you</label>
+                <input type="radio" name="N-death" id=""> <label for="">Skull wand</label>
+                <input type="radio" name="N-death" id=""> <label for="">Reaper scythe</label>
+                <input type="radio" name="N-death" id=""> <label for="">Wraith familiar</label>
+            </div>
+            <div class="hide" id="ChoosePet">
+                <label for="">Choose one beast to take with you</label>
+                <input type="radio" name="T-pet" id=""> <label for="">wolf cub</label>
+                <input type="radio" name="T-pet" id=""> <label for="">baby dragon</label>
+                <input type="radio" name="T-pet" id=""> <label for="">slime</label>
+            </div>
+            <div class="hide" id="ChooseSpirit">
+                <label for="">Choose your spirit skill</label>
+                <input type="radio" name="S-spirit" id=""> <label for="">spirit synchronization</label>
+                <input type="radio" name="S-spirit" id=""> <label for="">spirit infusion</label>
+                <input type="radio" name="S-spirit" id=""> <label for="">Spirit possession</label>
+            </div> 
+        </div>      
+        <div> <!-- house tick box-->
+            <div class="hide" id="HouseOfDark">
+                <label for="checkbox-imput">Would you like to have a Demon join you?</label>
+                <input type="checkbox" Name="checkbox-imput">
+            </div>
+            <div class="hide" id="HouseOfFire">
+                <label for="checkbox-imput">Would you like to have a Phoenix join you?</label>
+                <input type="checkbox" Name="checkbox-imput">
+            </div>
+            <div class="hide" id="HouseOfWater">
+                <label for="checkbox-imput">Would you like to have a Leviathan join you?</label>
+                <input type="checkbox" Name="checkbox-imput">
+            </div>
+            <div class="hide" id="HouseOfEarth">
+                <label for="checkbox-imput">Would you like to have a Behemoth join you?</label>
+                <input type="checkbox" Name="checkbox-imput">
+            </div>
+            <div class="hide" id="HouseOfAir">
+                <label for="checkbox-imput">Would you like to have a Sylph join you?</label>
+                <input type="checkbox" Name="checkbox-imput">
+            </div>
+            <div class="hide" id="HouseOfLight">
+                <label for="checkbox-imput">Would you like to have a Angel join you?</label>
+                <input type="checkbox" Name="checkbox-imput">
+            </div>
+            <br>
+        </div>    
+        <div> <!--Skill points-->
+            <label for="">Strength</label>
+            <input type="range" value="1" min="1" max="20" oninput="this.nextElementSibling.value = this.value" id="Strength-Stats">
+            <output>1</output>
+            <br>
+
+            <label for="">Dexterity</label>
+            <input type="range" value="1" min="1" max="20" oninput="this.nextElementSibling.value = this.value" id="Dexterity-Stats">
+            <output>1</output>
+            <br>
+
+            <label for="">Intelligence</label>
+            <input type="range" value="1" min="1" max="20" oninput="this.nextElementSibling.value = this.value" id="Intelligence-Stats">
+            <output>1</output>
+            <br>
+
+            <label for="">Arcane</label>
+            <input type="range" value="1" min="1" max="20" oninput="this.nextElementSibling.value = this.value" id="Arcane-Stats">
+            <output>1</output>  
+            <br>
+
+            <label for="">Cool</label>
+            <input type="range" value="1" min="1" max="20" oninput="this.nextElementSibling.value = this.value" id="Cool-Stats">
+            <output>1</output>
+            <br>
+        </div>
+        <div> <!--Images-->
+            <img src="images/Knight.png" alt="Knight" id="Knightimage" class="hide">
+            <img src="images/Mage.png" alt="Mage" id="Mageimage" class="hide">
+            <img src="images/Assassin.png" alt="Assassin" id="Assassinimage" class="hide">
+            <img src="images/Necromancer.png" alt="Necromancer" id="Necromancerimage" class="hide">
+            <img src="images/Tamer.png" alt="Tamer" id="Tamerimage" class="hide">
+            <img src="images/spirtiualist.png" alt="spirtiualist" id="spirtiualistimage" class="hide">
+        </div>
+
+        <br>
+
+        <button type="button" onclick="handleSubmit(event)">Submit</button>
+
+        <div id="sheet" class="characttersheet hide">
+            <h3>your name is, <spann id="name-output"></span></h3>           
+            <p>you are <span id="age-output"></span> years old</p>
+            <p>you choose the <span id="Race-output"></span> race</p>
+            <p>you choose the <span id="Class-output"></span> class</p>
+            <p>you choose <span id="equipment-output"></span></p>
+
+            <p>your strength is <span id="Strength-output"></span></p>
+            <p>your Dexterity is <span id="Dexterity-output"></span></p>
+            <p>your Intelligence is <span id="Intelligence-output"></span></p>
+            <p>your Arcane is <span id="Arcane-output"></span></p>
+            <p>your Cool is <span id="Cool-output"></span></p>
+
+            <!--<p>you choose the <span id="Spell-output"></span><span id="Item-output"></span></p>-->
+        </div>
+
+        <div class="hide">
+            <img src="images/Mage.png" alt=""> 
+
+        </div>
+    </div>  
+
+
+
+
+<!--
+
     <form action="">
         <label for="name-imput">Name:</label>
         <input type="text" name="" id="name-imput">
@@ -43,12 +219,24 @@
         <br>
         <button type="button" onclick="handleSubmit(event)">Submit</button>
     </form>
-
+-->
+    <!--
     <div id="sheet" class="characttersheet hide">
         <h1>name:</h1>
         <p id="name-output"></p>
     </div>
+    -->
 
     <script src="Code/Code.js"></script>
 </body>
 </html>
+
+
+<!--
+Fire equals phoenix
+earth equals behemoth
+water equals leviathan
+air equals sylph
+light equals Angel
+dark equals demon
+-->

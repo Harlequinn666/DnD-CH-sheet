@@ -1,8 +1,14 @@
-form{
-    background-color: red;
-    border-style:groove;
-    border-radius: 5px;
-    padding: 4%;
+
+
+
+.container{
+    width: 50%;
+    padding: 50px;
+    background: rgb(117, 1, 1);
+    border-radius: 20px;
+}
+h1{
+    font-family: Algerian;
 }
 
 .characttersheet{
