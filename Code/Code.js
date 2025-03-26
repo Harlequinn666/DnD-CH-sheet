@@ -21,11 +21,6 @@ function handleSubmit(e)
     document.querySelector("#age-output").innerHTML = ChosenAge
     document.querySelector("#Race-output").innerHTML = ChosenRace
     document.querySelector("#Class-output").innerHTML = ChosenClass
-    
-    
-    let Equipment = document.querySelector("#equipment").value
-    document.querySelector("#equipment-output").innerHTML = Equipment
-
 
     let Strength = document.querySelector("#Strength-Stats").value
     let Dexterity = document.querySelector("#Dexterity-Stats").value
@@ -39,37 +34,9 @@ function handleSubmit(e)
     document.querySelector("#Arcane-output").innerHTML = Arcane
     document.querySelector("#Cool-output").innerHTML = Cool
 
-
-    
-
-    
-
     document.querySelector("#sheet").classList.remove("hide");
 
     console.log(ChosenName, ChosenHouse);
-
-    
-    
-    //let chosenNcame = document.querySelector
-    
-    //let userName = document.querySelector("#name-input").value;
-    //console.log(userName);
-
-    //document.querySelector("#house-output").innerHTML = chosenHouse
-
-    //let userHouse = document.querySelector("#houseselector").value;
-    //console.log(userHouse);
-    //document.querySelector("#sheet").classList.remove("hide");
-
-    //let chosenname = document.querySelector("#name-input").value + " " + document.querySelector("#houseselector").value;
-    //document.querySelector("#name-output" + " " + "#house-output").innerHTML = chosenname;
-
-    //let username = document.querySelector("#name-input").value;
-    //let userhouse = document.querySelector("#houseselector").value;
-    //document.querySelector("#name-output" + " " + "#house-output").innerHTML = chosenname;
-
-    //document.querySelector("#sheet").classList.remove("hide");
-
 }
 
 
